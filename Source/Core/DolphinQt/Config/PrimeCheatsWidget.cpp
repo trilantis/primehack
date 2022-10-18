@@ -119,8 +119,3 @@ void PrimeCheatsWidget::showEvent(QShowEvent*)
 {
   OnLoadConfig();
 }
-
-void PrimeCheatsWidget::enterEvent(QEvent*)
-{
-  OnLoadConfig();
-}

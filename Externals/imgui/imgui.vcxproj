@@ -19,6 +19,7 @@
     <ClCompile>
       <!--IM_ASSERT is defined as Dolphin's ASSERT() :( (DolphinLib circular dependency)-->
       <AdditionalIncludeDirectories>$(CoreDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>

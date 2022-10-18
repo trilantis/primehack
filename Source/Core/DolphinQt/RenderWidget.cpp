@@ -543,8 +543,8 @@ void RenderWidget::PassEventToImGui(const QEvent* event)
 
     if (Config::Get(Config::PRIMEHACK_ENABLE))
     {
-      int x = static_cast<const QMouseEvent*>(event)->x();
-      int y = static_cast<const QMouseEvent*>(event)->y();
+      int x = static_cast<const QMouseEvent*>(event)->position().x();
+      int y = static_cast<const QMouseEvent*>(event)->position().y();
 
       prime::g_mouse_input->mousePressEvent(x, y);
     }

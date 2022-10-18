@@ -5,7 +5,8 @@ namespace prime {
 namespace {
 std::string readin_str(u32 str_ptr) {
   std::ostringstream key_readin;
-  for (char c; (c = read8(str_ptr)); str_ptr++) {
+
+  for (char c = read8(str_ptr); c; c = read8(++str_ptr)) {
     key_readin << c;
   }
   return key_readin.str();
@@ -77,7 +78,7 @@ void STRGPatch::run_mod(Game game, Region region) {
 void STRGPatch::run_mod_mp3() {
   char str[] = "&just=center;Mash Jump [&image=0x5FC17B1F30BAA7AE;] to shake off Gandrayda!";
   for (size_t i = 0; i < sizeof(str); i++) {
-    write8(str[i], replace_string_addr + i);
+    write8(str[i], replace_string_addr + static_cast<u32>(i));
   }
 }
 

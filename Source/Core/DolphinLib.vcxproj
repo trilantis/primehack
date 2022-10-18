@@ -51,6 +51,7 @@
     <ClCompile Include="Core\PrimeHack\Mods\PortalSkipMP2.cpp" />
     <ClCompile Include="Core\PrimeHack\Mods\BloomIntensityMP3.cpp" />
     <ClCompile Include="Core\PrimeHack\Mods\SpringballButton.cpp" />
+    <ClCompile Include="Core\PrimeHack\Mods\STRGPatch.cpp" />
     <ClCompile Include="Core\PrimeHack\Mods\ViewModifier.cpp" />
     <ClCompile Include="Core\PrimeHack\PrimeMod.cpp" />
     <ClCompile Include="Core\PrimeHack\PrimeUtils.cpp" />
@@ -83,6 +84,7 @@
     <ClInclude Include="Core\PrimeHack\Mods\RestoreDashing.h" />
     <ClInclude Include="Core\PrimeHack\Mods\SkipCutscene.h" />
     <ClInclude Include="Core\PrimeHack\Mods\SpringballButton.h" />
+    <ClInclude Include="Core\PrimeHack\Mods\STRGPatch.h" />
     <ClInclude Include="Core\PrimeHack\Mods\ViewModifier.h" />
     <ClInclude Include="Core\PrimeHack\PrimeMod.h" />
     <ClInclude Include="Core\PrimeHack\PrimeUtils.h" />

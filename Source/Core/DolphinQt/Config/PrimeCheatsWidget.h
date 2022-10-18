@@ -9,7 +9,6 @@ class PrimeCheatsWidget : public QWidget
 public:
   explicit PrimeCheatsWidget();
 protected:
-  void enterEvent(QEvent*);
   void showEvent(QShowEvent*);
 private:
   void CreateWidgets();
