@@ -55,6 +55,7 @@ void init_db(AddressDB& addr_db) {
   addr_db.register_address(Game::PRIME_1_GCN, "fov_tp_offset", -0x7fec, -0x7fe4);
   addr_db.register_address(Game::PRIME_1_GCN, "gun_pos", 0x8045bce8, 0x803e3c14);
   addr_db.register_address(Game::PRIME_1_GCN, "tweak_player", 0x8045c208, 0x803e4134);
+  addr_db.register_address(Game::PRIME_1_GCN, "grapple_swing_speed_offset", 0x2b0, 0x2b0);
   addr_db.register_address(Game::PRIME_1_GCN, "crosshair_color", 0x8045b678, 0x803e35a4);
   addr_db.register_address(Game::PRIME_1_GCN, "transform_offset", 0x34, 0x34);
   addr_db.register_dynamic_address(Game::PRIME_1_GCN, "world", "state_manager", {mrt1(0x850), rt0});
@@ -76,6 +77,7 @@ void init_db(AddressDB& addr_db) {
   addr_db.register_address(Game::PRIME_1_GCN_R1, "fov_tp_offset", -0x7fec);
   addr_db.register_address(Game::PRIME_1_GCN_R1, "gun_pos", 0x8045bec8); // [r13-5ecc]+4c
   addr_db.register_address(Game::PRIME_1_GCN_R1, "tweak_player", 0x8045c3e8);
+  addr_db.register_address(Game::PRIME_1_GCN_R2, "grapple_swing_speed_offset", 0x2b0);
   addr_db.register_address(Game::PRIME_1_GCN_R1, "crosshair_color", 0x8045b698); // [r13 - 5ec0]+1c0
   addr_db.register_address(Game::PRIME_1_GCN_R1, "transform_offset", 0x34);
   addr_db.register_dynamic_address(Game::PRIME_1_GCN_R1, "world", "state_manager", {mrt1(0x850), rt0});
@@ -97,6 +99,7 @@ void init_db(AddressDB& addr_db) {
   addr_db.register_address(Game::PRIME_1_GCN_R2, "fov_tp_offset", -0x7fec);
   addr_db.register_address(Game::PRIME_1_GCN_R2, "gun_pos", 0x8045cd48); // [r13-5ecc]+4c
   addr_db.register_address(Game::PRIME_1_GCN_R2, "tweak_player", 0x8045d268);
+  addr_db.register_address(Game::PRIME_1_GCN_R2, "grapple_swing_speed_offset", 0x2b0);
   addr_db.register_address(Game::PRIME_1_GCN_R2, "crosshair_color", 0x8045c6d8); // [r13 - 5ec0]+1c0
   addr_db.register_address(Game::PRIME_1_GCN_R2, "transform_offset", 0x34);
   addr_db.register_dynamic_address(Game::PRIME_1_GCN_R2, "world", "state_manager", {mrt1(0x850), rt0});

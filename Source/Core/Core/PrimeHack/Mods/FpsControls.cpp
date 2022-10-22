@@ -398,6 +398,7 @@ void FpsControls::run_mod_mp1_gc(Region region) {
 
   calculate_pitchyaw_delta();
   LOOKUP(tweak_player);
+  LOOKUP(grapple_swing_speed_offset);
   LOOKUP_DYN(firstperson_pitch);
   LOOKUP_DYN(angular_vel);
   writef32(FpsControls::pitch, firstperson_pitch);
@@ -410,6 +411,7 @@ void FpsControls::run_mod_mp1_gc(Region region) {
     writef32(0, (tweak_player + 0x84) + i * 4);
     writef32(0, (tweak_player + 0x84) + i * 4 - 32);
   }
+  writef32(1000.f, tweak_player + grapple_swing_speed_offset);
 
   LOOKUP_DYN(freelook_rotation_speed);
   LOOKUP_DYN(air_transitional_friction);
