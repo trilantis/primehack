@@ -94,6 +94,7 @@ else()
 endif()
 
 if(APPLE)
+  enable_language(OBJC)
   option(MACOS_USE_DEFAULT_SEARCH_PATH "Don't prioritize system library paths" OFF)
   option(SKIP_POSTPROCESS_BUNDLE "Skip postprocessing bundle for redistributability" OFF)
   # Enable adhoc code signing by default (otherwise makefile builds on ARM will not work)
