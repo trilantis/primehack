@@ -66,7 +66,7 @@ option(ENABLE_TESTS "Enables building the unit tests" ON)
 option(ENABLE_VULKAN "Enables vulkan video backend" ON)
 option(USE_DISCORD_PRESENCE "Enables Discord Rich Presence, show the current game on Discord" ON)
 option(USE_MGBA "Enables GBA controllers emulation using libmgba" ON)
-option(ENABLE_AUTOUPDATE "Enables support for automatic updates" OFF)
+option(ENABLE_AUTOUPDATE "Enables support for automatic updates" ON)
 option(STEAM "Creates a build for Steam" OFF)
 
 # Maintainers: if you consider blanket disabling this for your users, please
@@ -100,6 +100,8 @@ if(APPLE)
   # Enable adhoc code signing by default (otherwise makefile builds on ARM will not work)
   option(MACOS_CODE_SIGNING "Enable codesigning" ON)
   option(USE_BUNDLED_MOLTENVK "Build MoltenVK from Externals with Dolphin-specific patches" ON)
+	# Override building autoupdate piece on macOS - does not build
+	option(ENABLE_AUTOUPDATE "Enables support for automatic updates" OFF)
   set(MACOS_CODE_SIGNING_IDENTITY "-" CACHE STRING "The identity used for codesigning.")
   set(MACOS_CODE_SIGNING_IDENTITY_UPDATER "-" CACHE STRING "The identity used for codesigning, for the updater.")
 endif()
